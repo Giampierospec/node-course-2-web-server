@@ -41,7 +41,11 @@ app.get('/bad', (req, res) => {
     res.send({
         error: "Unable to fulfill request"
     });
-})
+});
+
+app.get("/projects", (req, res) => {
+    res.render("projects");
+});
 var port = process.env.PORT || 3000;
 app.set('port', port);
 app.listen(app.get('port'), () => {
